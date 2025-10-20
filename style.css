@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #ffd1dc, #fff5f7);
+  overflow-x: hidden;
+  color: #5a3b47;
+}
+
+canvas#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+  color: #ff4b6e;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.hero button {
+  background-color: #ff4b6e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #ff809b;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 1.5s ease;
+}
+
+.section h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2em;
+  color: #e84563;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.final {
+  font-size: 2em;
+  color: #ff4b6e;
+  animation: glow 3s infinite alternate;
+}
+
+audio {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 5;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff809b; }
+  to { text-shadow: 0 0 25px #ff4b6e; }
+}

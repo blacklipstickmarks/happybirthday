@@ -1,4 +1,3 @@
-// Эффект печатающегося текста
 const text = `С Днём Рождения, моя любимая Ажар!
 Каждый день с тобой — как маленькое чудо.
 Спасибо за тепло, за улыбку, за свет, который ты приносишь в мою жизнь.
@@ -15,12 +14,11 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
-// Плавный скролл
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Анимация падающих сердечек
+
 const canvas = document.getElementById('hearts');
 const ctx = canvas.getContext('2d');
 let hearts = [];
@@ -59,3 +57,4 @@ function drawHearts() {
   requestAnimationFrame(drawHearts);
 }
 drawHearts();
+

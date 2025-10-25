@@ -1,4 +1,4 @@
-const text = `С Днём Рождения, моя любимая Ажар!`;
+const text = `С Днём Рождения, Ажар!`;
 
 let i = 0;
 function typeWriter() {
@@ -53,5 +53,6 @@ function drawHearts() {
   requestAnimationFrame(drawHearts);
 }
 drawHearts();
+
 
 
